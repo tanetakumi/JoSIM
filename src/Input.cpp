@@ -15,7 +15,7 @@ using namespace JoSIM;
 
 std::vector<tokens_t> Input::read_input(
   LineInput& input, string_o fileName) {
-  if(fileName==std::nullopt){
+  if(fileName!=std::nullopt){
     if (std::filesystem::path(fileName.value()).has_parent_path()) {
       fileParentPath =
         std::filesystem::path(fileName.value()).parent_path().string();
